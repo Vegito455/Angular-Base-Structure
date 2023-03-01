@@ -1,0 +1,55 @@
+<div class="col-md-12">
+    <!-- nav -->
+    <div class="row">
+        <div class="col-md-12">
+            <!-- <nav class="navbar navbar-expand navbar-dark bg-dark text-white" > -->
+            <header class="navbar " *ngIf="currentUser">
+                <!-- <div class="container"> -->
+                <a class="navbar-brand" routerLink="/" style="margin-left:20px ;">
+                    <img src="../../../favicon.ico" alt="" width="35" height="26">
+                    <b class="ms-3">Angular Project - Base Structure</b>
+                </a>
+                <a class="nav-item nav-link me-3 cursor" (click)="logout()"><b>Logout</b></a>
+                <!-- </div> -->
+            </header>
+        </div>
+
+        <div class="col-md-12">
+
+            <div class="row">
+                <div class="col-md-2">
+                    <!-- menu item -->
+
+                    <div class="mt-4">
+                        MENU
+                    </div>
+                </div>
+
+                <div class="col-md-10">
+
+                    <div class="card mt-4">
+                        <h4 class="card-header">You're logged in with Basic HTTP Authentication!!</h4>
+                        <div class="card-body">
+                            <h6>Users from secure api end point</h6>
+                            <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+                            <ul *ngIf="users">
+                                <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- credits -->
+        <div class="col-md-12 ">
+
+            <footer class="text-center mt-4 ">
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    <span style="font-weight: bold;">© 2020 Copyright:</span>
+                    <a class="" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
